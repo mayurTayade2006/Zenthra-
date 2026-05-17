@@ -13,7 +13,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full bg-white p-8 rounded-xl shadow-lg border border-gray-100">
         <div className="text-center mb-8 flex flex-col items-center">
-          <img src="/src/assets/logo.png" alt="Zenthra Logo" className="h-24 object-contain mb-4" />
+          <img src="/logo_full.png" alt="Zenthra Logo" className="h-24 object-contain mb-4" />
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight">ZENTHRA</h1>
           <p className="text-sm text-gray-500 mt-2">Where Atomberg Teams Align, Track, and Achieve.</p>
         </div>
