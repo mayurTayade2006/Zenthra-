@@ -19,19 +19,19 @@ export default function TeamChat({ isDarkMode = true }) {
   const user = JSON.parse(localStorage.getItem('user') || '{}');
 
   useEffect(() => {
-    socket = io('http://localhost:5000');
+    socket = io('https://zenthra-dm3x.onrender.com');
 
     const fetchHistory = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch('http://localhost:5000/api/chat', {
+        const res = await fetch('https://zenthra-dm3x.onrender.com/api/chat', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (res.ok) {
           const data = await res.json();
           setMessages(data);
         }
-        await fetch('http://localhost:5000/api/chat/mark-read', {
+        await fetch('https://zenthra-dm3x.onrender.com/api/chat/mark-read', {
           method: 'PUT',
           headers: { 'Authorization': `Bearer ${token}` }
         });
@@ -73,7 +73,7 @@ export default function TeamChat({ isDarkMode = true }) {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/chat/upload', {
+      const res = await fetch('https://zenthra-dm3x.onrender.com/api/chat/upload', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` },
         body: formData
@@ -125,7 +125,7 @@ export default function TeamChat({ isDarkMode = true }) {
 
         try {
           const token = localStorage.getItem('token');
-          const res = await fetch('http://localhost:5000/api/chat/upload', {
+          const res = await fetch('https://zenthra-dm3x.onrender.com/api/chat/upload', {
             method: 'POST',
             headers: { 'Authorization': `Bearer ${token}` },
             body: formData

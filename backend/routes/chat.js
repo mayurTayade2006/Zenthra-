@@ -76,7 +76,7 @@ router.post('/upload', auth, upload.single('file'), async (req, res) => {
     }
     
     // Create the public URL for the file
-    const fileUrl = `http://localhost:5000/uploads/${req.file.filename}`;
+    const fileUrl = `https://zenthra-dm3x.onrender.com/uploads/${req.file.filename}`;
     
     res.json({
       fileUrl,

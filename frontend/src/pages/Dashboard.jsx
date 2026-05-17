@@ -68,7 +68,7 @@ export default function Dashboard() {
   }, [activeTab]);
 
   useEffect(() => {
-    const socket = io('http://localhost:5000');
+    const socket = io('https://zenthra-dm3x.onrender.com');
     socket.on('receiveMessage', (message) => {
       if (message.sender?._id !== user.id && activeTabRef.current !== 'Workspace Chat') {
         setUnreadMessages(prev => prev + 1);
@@ -88,7 +88,7 @@ export default function Dashboard() {
   const fetchAnalytics = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/analytics', {
+      const res = await fetch('https://zenthra-dm3x.onrender.com/api/analytics', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (res.ok) {
@@ -101,7 +101,7 @@ export default function Dashboard() {
 
   const apiFetch = async (path, options = {}) => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`http://localhost:5000${path}`, {
+    const res = await fetch(`https://zenthra-dm3x.onrender.com${path}`, {
       ...options,
       headers: {
         'Content-Type': 'application/json',

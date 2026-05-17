@@ -77,7 +77,7 @@ export default function AuthPage() {
     setIsLoading(true);
 
     try {
-      const endpoint = isLogin ? 'http://localhost:5000/api/auth/login' : 'http://localhost:5000/api/auth/register';
+      const endpoint = isLogin ? 'https://zenthra-dm3x.onrender.com/api/auth/login' : 'https://zenthra-dm3x.onrender.com/api/auth/register';
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

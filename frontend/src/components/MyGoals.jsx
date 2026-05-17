@@ -25,7 +25,7 @@ export default function MyGoals({ isDarkMode = true, searchQuery = '' }) {
     try {
       const token = localStorage.getItem('token');
       if (!token) return;
-      const res = await fetch('http://localhost:5000/api/goals', {
+      const res = await fetch('https://zenthra-dm3x.onrender.com/api/goals', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();
@@ -47,7 +47,7 @@ export default function MyGoals({ isDarkMode = true, searchQuery = '' }) {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/goals', {
+      const res = await fetch('https://zenthra-dm3x.onrender.com/api/goals', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
         body: JSON.stringify(goalData)
@@ -71,7 +71,7 @@ export default function MyGoals({ isDarkMode = true, searchQuery = '' }) {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/checkins/${activeGoal._id}`, {
+      const res = await fetch(`https://zenthra-dm3x.onrender.com/api/checkins/${activeGoal._id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
         body: JSON.stringify(checkinData)
@@ -95,7 +95,7 @@ export default function MyGoals({ isDarkMode = true, searchQuery = '' }) {
 
     const token = localStorage.getItem('token');
 
-    const res = await fetch('http://localhost:5000/api/goals/submit', {
+    const res = await fetch('https://zenthra-dm3x.onrender.com/api/goals/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

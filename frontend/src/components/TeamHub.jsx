@@ -10,7 +10,7 @@ export default function TeamHub({ isDarkMode = true, searchQuery = '' }) {
   const fetchTeamSheets = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/manager/teamsheets', {
+      const res = await fetch('https://zenthra-dm3x.onrender.com/api/manager/teamsheets', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (res.ok) {
@@ -33,7 +33,7 @@ export default function TeamHub({ isDarkMode = true, searchQuery = '' }) {
   const handleAction = async (sheetId, status) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/manager/teamsheets/${sheetId}/approve`, {
+      const res = await fetch(`https://zenthra-dm3x.onrender.com/api/manager/teamsheets/${sheetId}/approve`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
         body: JSON.stringify({ status, comments: `Manager ${status.toLowerCase()} the sheet.` })
