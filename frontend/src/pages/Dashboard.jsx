@@ -366,7 +366,7 @@ export default function Dashboard() {
       <aside className={`fixed lg:relative w-64 h-full transition-transform duration-300 z-40 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 ${isDarkMode ? 'bg-[#071426] border-[#1e3a5f]' : 'bg-white border-slate-200 shadow-xl'} border-r flex flex-col justify-between`}>
         <div className="overflow-y-auto custom-scrollbar flex-1">
           <div className={`h-24 flex items-center justify-between px-6 border-b ${isDarkMode ? 'border-[#1e3a5f]' : 'border-slate-200'}`}>
-            <img src="/src/assets/logo_full.png" alt="Zenthra" className={`h-16 w-auto object-contain ${!isDarkMode ? 'invert opacity-90' : 'mix-blend-screen contrast-[1.5]'}`} />
+            <img src="/public/logo_full.png" alt="Zenthra" className={`h-16 w-auto object-contain ${!isDarkMode ? 'invert opacity-90' : 'mix-blend-screen contrast-[1.5]'}`} />
             <button className="lg:hidden text-gray-400" onClick={() => setSidebarOpen(false)}><X size={24} /></button>
           </div>
           <div className="px-6 py-4">

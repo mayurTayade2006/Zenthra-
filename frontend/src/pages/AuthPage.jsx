@@ -122,7 +122,7 @@ export default function AuthPage() {
 
         <div className="relative z-20 p-12 text-center w-full">
           <div className="bg-[#071426]/60 backdrop-blur-md p-8 rounded-3xl inline-block border border-white/10 shadow-2xl">
-            <img src="/src/assets/logo_full.png" alt="Zenthra" className="h-28 w-auto mx-auto mb-6 object-contain mix-blend-screen contrast-[1.5] brightness-[1.2]" />
+            <img src="/public/logo_full.png" alt="Zenthra" className="h-28 w-auto mx-auto mb-6 object-contain mix-blend-screen contrast-[1.5] brightness-[1.2]" />
             <h2 className="text-4xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
               Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#FFC107]">Zenthra</span>
             </h2>
